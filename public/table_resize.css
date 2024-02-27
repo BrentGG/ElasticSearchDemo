@@ -1,0 +1,45 @@
+/* https://phuoc.ng/collection/html-dom/resize-columns-of-a-table/ */
+
+.results table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.results table th {
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.results table td {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.results table th:first-child,
+.results table td:first-child {
+    border-left: 1px solid #ccc;
+}
+
+.results table th,
+.results table td {
+    padding: 0.5rem;
+    min-width: 5vw;
+}
+
+.results .resizer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    cursor: col-resize;
+    user-select: none;
+}
+.results .resizer:hover,
+.results .resizing {
+    border-right: 2px solid blue;
+}
+
+.results .resizable {
+    border: 1px solid gray;
+    height: 100px;
+    width: 100px;
+}

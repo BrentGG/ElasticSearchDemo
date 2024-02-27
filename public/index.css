@@ -1,0 +1,146 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html,  body {
+    height: 200%;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+/* SEARCH */
+
+.search-comp {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+/* SEARCH BAR */
+
+.search-comp .search-bar {
+    display: flex;
+    justify-content: stretch;
+    column-gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-comp .search-bar input {
+    padding: 0.4rem;
+    flex-grow: 3;
+    border: 1px solid #000;
+}
+
+.search-comp .search-bar button {
+    min-width: min-content;
+    cursor: pointer;
+    padding: 0.4rem;
+    flex-grow: 1;
+    border: 1px solid #000;
+    transition: 0.4s;
+}
+
+.search-comp .search-bar button:hover {
+    background-color: #ccc;
+}
+
+/* SEARCH FIELDS */
+
+.cbActions {
+    display: flex;
+    column-gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.cbActions p {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* https://www.w3schools.com/howto/howto_js_accordion.asp */
+
+.accordion {
+    display: flex;
+    column-gap: 0.3rem;
+    align-items: center;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 0.3rem;
+    width: 30%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    border: 1px solid #000;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.panel input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.accordion:before {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    padding-bottom: 3px;
+}
+
+.active:before {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    padding-bottom: 3px;
+}
+
+/* RESULTS */
+
+.results {
+    display: flex;
+    flex-direction: column;
+}
+
+.results table {
+    position: relative;
+}
+
+.results table th {
+    text-align: left;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+#no-match {
+    margin: 0 auto;
+    display: none;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="table_resize.css">
+    <title>ElasticSearch Demo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-comp">
+            <div class="search-bar">
+                <input id="search-inp" name="search-inp" type="text" placeholder="Search REST test results..."/>
+                <button id="search-btn" onclick="search()">Search</button>
+            </div>
+            <button class="accordion">Search fields</button>
+            <div id="fields-panel" class="panel">
+            </div>
+        </div>
+        <div class="results">
+            <table id="results-table">
+            </table>
+        </div>
+        <p id="no-match">No matching results.</p>
+    </div>
+    
+    <script src="table_resize.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
